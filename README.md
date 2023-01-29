@@ -7,4 +7,4 @@ Face mask detection : For the face mask detection system we are loading an input
 
 Social distance monitoring : Applying object detection to detect all people (and only people) in a video stream and then computing pairwise distances between all detected people and then based on these distances,  check the people who are not maintaining appropriate distance.
 
-Face Recognition : Recognizing  masked faces requires making a system that can identify the available datasets of a masked face, i.e., facial features. The advanced detection technology includes various facial features left uncovered, such as eyes, eyebrows, and the bridge of the nose![image](https://user-images.githubusercontent.com/76552628/215358187-2afa09f0-c75c-4a1e-8b9d-a9c1460f8acc.png)
+Face Recognition : Recognizing  masked faces requires making a system that can identify the available datasets of a masked face, i.e., facial features. The advanced detection technology includes various facial features left uncovered, such as eyes, eyebrows, and the bridge of the nose!
