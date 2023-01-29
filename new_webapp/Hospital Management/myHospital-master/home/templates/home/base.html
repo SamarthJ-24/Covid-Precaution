@@ -1,0 +1,61 @@
+{% load static %}
+
+<html>
+	<head>
+		<title>{% block title %}Home{% endblock %} | myHospital</title>
+		<!--<link rel="icon" href="imageset/favicon.png">-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="{% static "favicon.png" %}"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="{% static "css/materialize.min.css" %}">
+		<link rel="stylesheet" href="{% static "css/style.css" %}">
+		<script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+		<script src="{% static "js/materialize.min.js" %}"></script>
+
+		<script src="{% static "js/script.js" %}"></script>
+	</head>
+
+	<body>
+
+		{% if messages %}
+			{% for message in messages %}
+					<script>
+						Materialize.toast('{{ message }}', 3000);
+					</script>
+			{% endfor %}
+		{% endif %}
+
+		<ul id="slide-out" class="side-nav fixed">
+			<li><div class="user-view">
+		      <div class="background">
+						<img src="{% static "index.jpeg" %}">
+		      </div>
+					<a href=""><img class="circle center" src="{% static 'icon.png' %}"></a>
+		    	</div>
+			</li>
+
+			<li><div class="divider"></div></li>
+			<li><a class="waves-effect" href="home">Face recognition & Mask Detection</a></li>
+			<li><a class="waves-effect" href="sd">Social Distancing Monitoring</a></li>
+			<li><a class="waves-effect">Patient </a></li>
+			<li><a class="waves-effect">Face-recognition</a></li>
+
+		</ul>
+
+		<main class="center-align">
+					<nav>
+			    	<div class="nav-wrapper blue-grey darken-3">
+							<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+							<a href="#" class="brand-logo center">Hospital Portal</a>
+						</div>
+					</nav>
+					<div id="body">
+						<center><img src="{% url 'mask_feed' %}"></center>
+					</div>
+		</main>
+
+
+	</body>
+</html>
